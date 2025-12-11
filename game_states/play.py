@@ -84,6 +84,10 @@ class GameStatePlay(GameState):
             boss.update(self.level.player.rect)
         
     def _create_speedlines(self) -> None:
+        self.zoomed_width = CONFIG.WIDTH / self.zoom
+        self.zoomed_height = CONFIG.HEIGHT / self.zoom
+        camera_left = int(self.camera[0])
+        camera_right = int(self.camera[0] + self.zoomed_width)
         direction = Vector2(0, self.level.player.gravity_direction)
         camera_left = int(self.camera[0])
         camera_right = int(self.camera[0] + self.zoomed_width)

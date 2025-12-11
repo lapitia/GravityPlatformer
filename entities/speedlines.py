@@ -22,7 +22,9 @@ class Speedline(pygame.sprite.Sprite):
 
     def update(self):
         self.age += 1
-        self.rect.center += self.velocity
+        center = Vector2(self.rect.center)
+        center += self.velocity
+        self.rect.center = (int(center.x), int(center.y))
         self.image.set_alpha(255 - int(255 * (self.age / self.lifetime)))
         
         #remove when expired
