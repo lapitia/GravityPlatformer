@@ -1,3 +1,2 @@
 # 2D-Platformer
-Projekt Python 2
-Tomasz Nowak, Veranika Yaremchuk
+Python 2, university subject
